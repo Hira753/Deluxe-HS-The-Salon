@@ -1,0 +1,6 @@
+{
+  "name": "Deluxe HS The Salon",
+  "description": "Luxury beauty salon offering hair styling, bridal makeup, skin facials, keratin treatments, waxing, manicures, pedicures, and online appointment booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,317 @@
+import { ServiceItem, Stylist, Review, SocialLinks } from '../types';
+
+// Images imported from generated assets
+import heroImage from '../assets/images/hero_deluxe_salon_1784701869851.jpg';
+import bridalImage from '../assets/images/bridal_makeup_luxury_1784701888422.jpg';
+import keratinImage from '../assets/images/hair_keratin_treatment_1784701906604.jpg';
+
+export const SALON_IMAGES = {
+  hero: heroImage,
+  bridal: bridalImage,
+  keratin: keratinImage,
+};
+
+export const SALON_SOCIAL_LINKS: SocialLinks = {
+  facebook: "https://www.facebook.com/Deluxehsthesalon",
+  tiktok: "https://www.tiktok.com/@deluxehsthesalon?_r=1&_t=ZS-93XP3euHTYW",
+  instagram: "https://www.instagram.com/deluxehsthesalon?utm_source=ig_web_button_share_sheet&igsh=ZDNIZDc0MzIxNw==",
+  whatsapp: "https://wa.me/923013928585?text=Hello%20Deluxe%20HS%20The%20Salon!%20I%20would%20like%20to%20inquire%20about%20your%20services.",
+  phone: "+92 301 3928585",
+  address: "Plot 452, near Faysal Hospital, Block A People's Colony No 1, D-Ground, Faisalabad, Pakistan",
+  shortAddress: "D-Ground | Near Faysal Hospital, Faisalabad",
+  timing: "Mon - Sun: 10:00 AM - 8:00 PM",
+};
+
+export const SALON_SERVICES: ServiceItem[] = [
+  // Hair Care & Styling
+  {
+    id: 's-balayage',
+    name: 'Balayage Hair Color',
+    category: 'Hair Care',
+    pricePKR: 18500,
+    durationMinutes: 180,
+    description: 'Custom hand-painted subtle highlights for a natural, sun-kissed luxury multidimensional glow.',
+    popular: true,
+  },
+  {
+    id: 's-blow-dry',
+    name: 'Blow Dry & Styling',
+    category: 'Hair Care',
+    pricePKR: 2500,
+    durationMinutes: 45,
+    description: 'Professional volumizing blow dry, sleek straight finish or bouncy glamorous curls.',
+  },
+  {
+    id: 's-box-braids',
+    name: 'Box Braids',
+    category: 'Hair Care',
+    pricePKR: 8500,
+    durationMinutes: 120,
+    description: 'Neat, protective box braids styled to perfection with lightweight hair extensions.',
+  },
+  {
+    id: 's-braids',
+    name: 'Custom Hair Braids',
+    category: 'Hair Care',
+    pricePKR: 3500,
+    durationMinutes: 60,
+    description: 'Elegant French, Dutch, or fishtail braids suitable for party and casual occasions.',
+  },
+  {
+    id: 's-hairstyling',
+    name: 'Executive Hairstyling',
+    category: 'Hair Care',
+    pricePKR: 4500,
+    durationMinutes: 60,
+    description: 'High-fashion up-dos, textured party hairdos, and signature Deluxe HS signature styles.',
+    popular: true,
+  },
+  {
+    id: 's-keratin-botox',
+    name: 'Hair Extenso & Keratin Botox',
+    category: 'Hair Care',
+    pricePKR: 22000,
+    durationMinutes: 210,
+    description: 'Deep protein reconstruction treatment providing sleek straight, frizz-free, ultra-shiny hair.',
+    popular: true,
+    specialNote: 'Deep nourishing shine formula',
+  },
+  {
+    id: 's-shampoo-cond',
+    name: 'Shampoo & Deep Conditioning',
+    category: 'Hair Care',
+    pricePKR: 2000,
+    durationMinutes: 30,
+    description: 'Relaxing scalp wash with premium sulfate-free shampoo and intensive keratin moisture mask.',
+  },
+
+  // Bridal & Makeup
+  {
+    id: 's-bridal-services',
+    name: 'Signature Bridal Makeover',
+    category: 'Bridal & Makeup',
+    pricePKR: 0,
+    durationMinutes: 240,
+    description: 'Complete high-definition or airbrush bridal makeup, dupatta setting, jewelry placement, hairstyling, nails, and glow prep.',
+    popular: true,
+    specialNote: 'Includes pre-bridal skin consultation',
+  },
+  {
+    id: 's-makeup-services',
+    name: 'Party / Engagement Make-up',
+    category: 'Bridal & Makeup',
+    pricePKR: 12000,
+    durationMinutes: 90,
+    description: 'Glamorous HD makeup tailored for engagement, Nikkah, Barat guests, or formal evening looks.',
+    popular: true,
+  },
+
+  // Skin & Face
+  {
+    id: 's-skin-facial',
+    name: 'Deluxe Hydra Glow Skin Facial',
+    category: 'Skin & Face',
+    pricePKR: 7500,
+    durationMinutes: 75,
+    description: 'Multi-step skin rejuvenation facial incorporating deep cleansing, gentle extraction, and hydration mask.',
+    popular: true,
+  },
+  {
+    id: 's-eyebrow-shaping',
+    name: 'Eyebrow Shaping & Threading',
+    category: 'Skin & Face',
+    pricePKR: 800,
+    durationMinutes: 20,
+    description: 'Precision eyebrow shaping, tinting, and facial threading for a clean, sharp look.',
+  },
+  {
+    id: 's-tanning',
+    name: 'Sunless Glow Tanning',
+    category: 'Skin & Face',
+    pricePKR: 6000,
+    durationMinutes: 45,
+    description: 'Even golden bronze tan application leaving your skin radiant and velvety smooth.',
+  },
+
+  // Nails & Spa
+  {
+    id: 's-manicure',
+    name: 'Deluxe Spa Manicure',
+    category: 'Nails & Spa',
+    pricePKR: 3200,
+    durationMinutes: 45,
+    description: 'Nail shaping, cuticle treatment, exfoliating hand scrub, relaxing massage, and gel polish finish.',
+  },
+  {
+    id: 's-pedicure',
+    name: 'Pedicure & Heel Care',
+    category: 'Nails & Spa',
+    pricePKR: 3800,
+    durationMinutes: 60,
+    description: 'Deep foot soak, dead skin removal, heel smoothing, soothing massage, and long-wear nail color.',
+  },
+  {
+    id: 's-massage',
+    name: 'Full Body Relaxation Massage',
+    category: 'Nails & Spa',
+    pricePKR: 8000,
+    durationMinutes: 60,
+    description: 'Therapeutic aroma oil muscle relaxation massage restoring energy and relieving tension.',
+  },
+
+  // Waxing & Hair Removal
+  {
+    id: 's-body-waxing',
+    name: 'Full Body Fruit Waxing',
+    category: 'Waxing',
+    pricePKR: 9000,
+    durationMinutes: 90,
+    description: 'Gentle fruit wax formula designed for smooth hair removal without irritation, leaving skin supple.',
+    popular: true,
+    specialNote: 'As featured: Fruit wax PKR 9,000',
+  },
+  {
+    id: 's-brazilian-waxing',
+    name: 'Brazilian Waxing',
+    category: 'Waxing',
+    pricePKR: 5000,
+    durationMinutes: 40,
+    description: 'Hygienic, smooth, and quick organic wax treatment using sensitive-skin soothing oils.',
+  },
+  {
+    id: 's-waxing',
+    name: 'Half Body / Specific Waxing',
+    category: 'Waxing',
+    pricePKR: 3500,
+    durationMinutes: 30,
+    description: 'Arms, legs, or underarm waxing treatment using gentle warm botanical wax.',
+  },
+];
+
+export const SALON_STYLISTS: Stylist[] = [
+  {
+    id: 'st-hira',
+    name: 'Hira Shah',
+    role: 'Lead Master Artist & Bridal Specialist',
+    specialties: ['Royal Bridal Makeup', 'Party Glam', 'Dupatta & Jewelry Setting'],
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80',
+    rating: 5.0,
+  },
+  {
+    id: 'st-sana',
+    name: 'Sana Malik',
+    role: 'Senior Hair Technician & Colorist',
+    specialties: ['Hair Extenso Keratin', 'Balayage', 'Hair Cut & Styling'],
+    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80',
+    rating: 4.9,
+  },
+  {
+    id: 'st-ayesha',
+    name: 'Dr. Ayesha Noor',
+    role: 'Aesthetician & Facial Therapist',
+    specialties: ['Deluxe Hydra Glow', 'Skin Treatments', 'Exfoliating Facials'],
+    avatar: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=300&q=80',
+    rating: 4.9,
+  },
+  {
+    id: 'st-any',
+    name: 'Any Available Specialist',
+    role: 'First Available Senior Beautician',
+    specialties: ['All Services', 'Quick Slot Booking'],
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80',
+    rating: 4.8,
+  },
+];
+
+export const INITIAL_REVIEWS: Review[] = [
+  {
+    id: 'r1',
+    clientName: 'Malik Hamza',
+    service: 'Facial Service, Hand & Feet Massage',
+    rating: 5,
+    comment: 'I had an absolutely wonderful experience at this salon today. The staff was exceptionally professional, cooperative, and genuinely welcoming. Their facial service was incredibly relaxing, and the hand, feet, neck, and shoulder massage made the experience even more rejuvenating. The senior staff handled everything with great expertise and care.',
+    date: '2 months ago',
+    verified: true,
+  },
+  {
+    id: 'r2',
+    clientName: 'Sana Ch',
+    service: 'Keratin Treatment, Facial, Mani & Pedi',
+    rating: 5,
+    comment: 'I recently visited Deluxe HS salon and had an amazing experience! I went in for a keratin treatment, facial, manicure, and pedicure, and I am so happy with the results. The staff was very professional, welcoming, and attentive throughout the entire process. The keratin treatment left my hair silky smooth, shiny, and frizz-free—just what I needed.',
+    date: '10 months ago',
+    verified: true,
+  },
+  {
+    id: 'r3',
+    clientName: 'Rehab Malik',
+    service: 'Nikkah & Bridal Signature Makeup',
+    rating: 5,
+    comment: 'Maine Apne nikkah Ka makeup hs the delux saloon SE li thi... Or ab Maine apna bridal makeup b yehin SE liya h and I m highly obsessed and satisfied with their services... The atmosphere is very friendly and cooperative... I suggest everyone to come and visit on my recommendations.',
+    date: '1 month ago',
+    verified: true,
+  },
+  {
+    id: 'r4',
+    clientName: 'Farwa Ramzan',
+    service: 'Signature Bridal Makeup & Hairstyling',
+    rating: 5,
+    comment: 'Aoa I\'m here Hs the salon first Time for makeup they give me bridal service\'s with signature bride makeup & My makeup look is so gorgeous 🥰 they are so cooperative with humble owner thank you so for everything 💕 highly recommend it 😊',
+    date: '5 months ago',
+    verified: true,
+  },
+  {
+    id: 'r5',
+    clientName: 'Adeeba Asad',
+    service: 'Pedicure, Massage & Manicure',
+    rating: 5,
+    comment: 'Amazing experience at the Deluxe HS The salon Executive Branch. The staff were super cooperative and made me feel like royalty. The service was top-notch, and I left looking and feeling fabulous! Highly recommend!',
+    date: '3 months ago',
+    verified: true,
+  },
+  {
+    id: 'r6',
+    clientName: 'Aqsa Arqam',
+    service: 'Hair Extenso & Blowouts',
+    rating: 5,
+    comment: 'I recently got my extenso done from this salon and I\'m so happy with the results! The staff was very professional, explained everything step by step, and handled my hair with great care. The products they used were original and my hair feels super smooth, shiny, and straight just like I wanted.',
+    date: '10 months ago',
+    verified: true,
+  },
+  {
+    id: 'r7',
+    clientName: 'ziddi Kuri532',
+    service: 'Mani Pedi Spa',
+    rating: 5,
+    comment: 'I choose Mani Pedi at deluxe salon. It was my second time here. I really enjoyed their services. Mani Pedi was so good and this services provided by Saira and Amna both are trained in their work also their behavior is incredible.',
+    date: '1 month ago',
+    verified: true,
+  },
+  {
+    id: 'r8',
+    clientName: 'Maham Rehman',
+    service: 'Hair Highlights & Blowouts',
+    rating: 5,
+    comment: 'Mera first time experience hai deluxe Kay sath or Mai fozia family ki reference say ai hu or Mai ne yaha say highlights li Hain I\'m super satisfied 🥰🥰🥰 highly recommend this salon come & book your service\'s...',
+    date: '2 months ago',
+    verified: true,
+  },
+  {
+    id: 'r9',
+    clientName: 'Amina Liaqat',
+    service: 'Makeup, Hair Service, Mani Pedi',
+    rating: 5,
+    comment: 'Everything is very good and excellent. My experience is very well. Meny yha sy makeup hair service and Meni Pedi krwaya h sb Kuch bht acha ha. Or Inka staff b bht collide ha 🥰',
+    date: '3 months ago',
+    verified: true,
+  },
+  {
+    id: 'r10',
+    clientName: 'Israr Sab',
+    service: 'Full Body Waxing, Mani Pedi & Massage',
+    rating: 5,
+    comment: 'Tried multiple services including massage, manicure, pedicure, waxing, and facial, and everything was absolutely perfect. The staff is highly qualified, professional, and very well-trained. They know exactly how to make you feel comfortable and relaxed. I would rate this salon 10/10 in every aspect.',
+    date: '9 months ago',
+    verified: true,
+  },
+];

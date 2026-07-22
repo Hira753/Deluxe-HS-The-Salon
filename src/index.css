@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-salon-coral: #FF8559;
+  --color-salon-apricot: #FFB578;
+  --color-salon-crimson: #E65447;
+  --color-salon-rose: #CF5376;
+  --color-salon-dark: #1A0912;
+  --color-salon-darkcard: #28101A;
+  --color-salon-cream: #FFF8F6;
+  --color-salon-surface: #FFFFFF;
+}
+
+@layer utilities {
+  .bg-gradient-palette {
+    background: linear-gradient(135deg, #CF5376 0%, #E65447 35%, #FF8559 70%, #FFB578 100%);
+  }
+  .bg-gradient-coral {
+    background: linear-gradient(135deg, #FF8559 0%, #FFB578 100%);
+  }
+  .bg-gradient-crimson {
+    background: linear-gradient(135deg, #CF5376 0%, #E65447 100%);
+  }
+  .text-gradient-gold, .text-gradient-sunset {
+    background: linear-gradient(135deg, #FFB578 0%, #FF8559 50%, #CF5376 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .border-palette-glow {
+    border-color: rgba(255, 133, 89, 0.35);
+  }
+}
+
+body {
+  background-color: #FFF8F6;
+  color: #1A0912;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
