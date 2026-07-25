@@ -1,16 +1,5 @@
 import { ServiceItem, Stylist, Review, SocialLinks } from '../types';
 
-// Images imported from generated assets
-import heroImage from '../assets/images/hero_deluxe_salon_1784701869851.jpg';
-import bridalImage from '../assets/images/bridal_makeup_luxury_1784701888422.jpg';
-import keratinImage from '../assets/images/hair_keratin_treatment_1784701906604.jpg';
-
-export const SALON_IMAGES = {
-  hero: heroImage,
-  bridal: bridalImage,
-  keratin: keratinImage,
-};
-
 export const SALON_SOCIAL_LINKS: SocialLinks = {
   facebook: "https://www.facebook.com/Deluxehsthesalon",
   tiktok: "https://www.tiktok.com/@deluxehsthesalon?_r=1&_t=ZS-93XP3euHTYW",
@@ -194,7 +183,7 @@ export const SALON_STYLISTS: Stylist[] = [
     name: 'Hira Shah',
     role: 'Lead Master Artist & Bridal Specialist',
     specialties: ['Royal Bridal Makeup', 'Party Glam', 'Dupatta & Jewelry Setting'],
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80',
+    avatar: '',
     rating: 5.0,
   },
   {
@@ -202,7 +191,7 @@ export const SALON_STYLISTS: Stylist[] = [
     name: 'Sana Malik',
     role: 'Senior Hair Technician & Colorist',
     specialties: ['Hair Extenso Keratin', 'Balayage', 'Hair Cut & Styling'],
-    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80',
+    avatar: '',
     rating: 4.9,
   },
   {
@@ -210,7 +199,7 @@ export const SALON_STYLISTS: Stylist[] = [
     name: 'Dr. Ayesha Noor',
     role: 'Aesthetician & Facial Therapist',
     specialties: ['Deluxe Hydra Glow', 'Skin Treatments', 'Exfoliating Facials'],
-    avatar: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=300&q=80',
+    avatar: '',
     rating: 4.9,
   },
   {
@@ -218,7 +207,7 @@ export const SALON_STYLISTS: Stylist[] = [
     name: 'Any Available Specialist',
     role: 'First Available Senior Beautician',
     specialties: ['All Services', 'Quick Slot Booking'],
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80',
+    avatar: '',
     rating: 4.8,
   },
 ];

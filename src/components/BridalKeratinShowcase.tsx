@@ -1,7 +1,5 @@
 import React from 'react';
-import { Sparkles, Check, Heart, MessageSquare } from 'lucide-react';
-import { SALON_IMAGES } from '../data/salonData';
-import baratBrideImg from '../assets/images/bridal_barat_red_kundan_1784704790907.jpg';
+import { Sparkles, Check, Heart, MessageSquare, Award } from 'lucide-react';
 
 export const BridalKeratinShowcase: React.FC = () => {
   const bridalWaUrl = `https://wa.me/923013928585?text=${encodeURIComponent('Hello Deluxe HS Salon! I would like to inquire about availability and details for the Deluxe Signature Bridal Look.')}`;
@@ -32,30 +30,27 @@ export const BridalKeratinShowcase: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Card 1: Signature Bridal */}
           <div className="bg-[#28101A] rounded-2xl border border-[#FF8559]/40 overflow-hidden shadow-2xl flex flex-col justify-between group hover:border-[#CF5376] transition-all duration-300">
-            <div className="relative aspect-[16/10] overflow-hidden bg-black">
-              <img
-                src={baratBrideImg}
-                alt="Signature Bridal Look Deluxe HS"
-                className="w-full h-full object-cover object-center scale-[1.05] group-hover:scale-110 transition-transform duration-700"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#28101A] via-transparent to-transparent opacity-90" />
-              <div className="absolute top-4 left-4 bg-[#CF5376] text-white text-xs font-bold px-3 py-1 rounded-full border border-[#FFB578]/50 flex items-center gap-1">
-                <Heart className="w-3.5 h-3.5 fill-white text-white" />
-                <span>Real Bridal Look</span>
+            {/* Header Icon Banner */}
+            <div className="p-6 sm:p-8 bg-gradient-to-br from-[#351523] to-[#28101A] border-b border-[#FF8559]/20 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-[#CF5376]/20 border border-[#FF8559]/40 flex items-center justify-center text-[#FFB578]">
+                  <Heart className="w-6 h-6 fill-[#CF5376]" />
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-[#FFB578]">
+                    Master Stylist Hira Shah
+                  </span>
+                  <h3 className="text-2xl font-serif font-bold text-white">
+                    Signature Bridal Makeover
+                  </h3>
+                </div>
               </div>
+              <span className="text-xs font-semibold px-3 py-1 rounded-full bg-[#CF5376]/20 border border-[#FF8559]/40 text-[#FFB578] shrink-0">
+                Barat & Nikkah
+              </span>
             </div>
 
             <div className="p-6 sm:p-8 space-y-4">
-              <div className="flex items-center justify-between">
-                <h3 className="text-2xl font-serif font-bold text-white">
-                  Signature Bridal Makeover
-                </h3>
-                <span className="text-xs font-semibold px-3 py-1 rounded-full bg-[#CF5376]/20 border border-[#FF8559]/40 text-[#FFB578]">
-                  Barat & Nikkah
-                </span>
-              </div>
-
               <p className="text-xs sm:text-sm text-rose-100/80 leading-relaxed">
                 Complete bridal transformation including HD or Airbrush makeup, hairstyle, dupatta setting, jewelry placement, eyelash application, nail polish, and pre-bridal skin prep.
               </p>
@@ -96,30 +91,27 @@ export const BridalKeratinShowcase: React.FC = () => {
 
           {/* Card 2: Keratin Botox & Extenso */}
           <div className="bg-[#28101A] rounded-2xl border border-[#FF8559]/40 overflow-hidden shadow-2xl flex flex-col justify-between group hover:border-[#CF5376] transition-all duration-300">
-            <div className="relative aspect-[16/10] overflow-hidden">
-              <img
-                src={SALON_IMAGES.keratin}
-                alt="Hair Extenso Keratin Botox Deluxe HS"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#28101A] via-transparent to-transparent opacity-90" />
-              <div className="absolute top-4 left-4 bg-[#E65447] text-white text-xs font-bold px-3 py-1 rounded-full border border-[#FFB578]/50 flex items-center gap-1">
-                <Sparkles className="w-3.5 h-3.5 text-[#FFB578]" />
-                <span>Hair Reconstruct</span>
+            {/* Header Icon Banner */}
+            <div className="p-6 sm:p-8 bg-gradient-to-br from-[#351523] to-[#28101A] border-b border-[#FF8559]/20 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-[#E65447]/20 border border-[#FF8559]/40 flex items-center justify-center text-[#FFB578]">
+                  <Award className="w-6 h-6 text-[#FF8559]" />
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-[#FFB578]">
+                    Advanced Hair Care
+                  </span>
+                  <h3 className="text-2xl font-serif font-bold text-white">
+                    Hair Extenso & Keratin Botox
+                  </h3>
+                </div>
               </div>
+              <span className="text-xs font-semibold px-3 py-1 rounded-full bg-[#E65447]/20 border border-[#FF8559]/40 text-[#FFB578] shrink-0">
+                Advanced Care
+              </span>
             </div>
 
             <div className="p-6 sm:p-8 space-y-4">
-              <div className="flex items-center justify-between">
-                <h3 className="text-2xl font-serif font-bold text-white">
-                  Hair Extenso & Keratin Botox
-                </h3>
-                <span className="text-xs font-semibold px-3 py-1 rounded-full bg-[#E65447]/20 border border-[#FF8559]/40 text-[#FFB578]">
-                  Advanced Care
-                </span>
-              </div>
-
               <p className="text-xs sm:text-sm text-rose-100/80 leading-relaxed">
                 Say goodbye to frizz and split ends! Intensive protein infusion treatment repairing damaged cuticle layers, giving sleek, glossy, mirror-shine straight hair that lasts for months.
               </p>

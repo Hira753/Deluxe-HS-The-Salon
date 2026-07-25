@@ -1,6 +1,6 @@
 import React from 'react';
-import { Phone, Sparkles, Award, Star, CheckCircle2, ChevronRight, ShieldCheck, MessageSquare, MapPin } from 'lucide-react';
-import { SALON_IMAGES, SALON_SOCIAL_LINKS } from '../data/salonData';
+import { Phone, Sparkles, Award, Star, CheckCircle2, ChevronRight, ShieldCheck, MessageSquare, MapPin, Heart, Sparkle } from 'lucide-react';
+import { SALON_SOCIAL_LINKS } from '../data/salonData';
 
 interface HeroProps {
   onExploreServices: () => void;
@@ -9,17 +9,8 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onExploreServices }) => {
   return (
     <section className="relative bg-[#1A0912] text-white overflow-hidden py-12 md:py-20 lg:py-24 border-b border-[#CF5376]/30">
-      {/* Background Image Overlay with Gradient */}
-      <div className="absolute inset-0 z-0 opacity-20 mix-blend-luminosity">
-        <img
-          src={SALON_IMAGES.hero}
-          alt="Deluxe HS The Salon Luxury Interior"
-          className="w-full h-full object-cover object-center scale-105 transform animate-fade-in"
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1A0912] via-[#1A0912]/90 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1A0912] via-transparent to-[#1A0912]/80" />
-      </div>
+      {/* Ambient Gradient Mesh Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#CF5376]/20 via-[#1A0912] to-[#12050C] pointer-events-none" />
 
       {/* Decorative Glow */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#CF5376]/20 rounded-full blur-3xl pointer-events-none" />
@@ -127,66 +118,79 @@ export const Hero: React.FC<HeroProps> = ({ onExploreServices }) => {
             </div>
           </div>
 
-          {/* Right Visual Card Column */}
+          {/* Right Visual Card Column with Uploaded Showcase Image */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               {/* Main Card Frame with Palette Gradient */}
               <div className="rounded-2xl p-1 bg-gradient-to-b from-[#CF5376] via-[#E65447] to-[#FF8559] shadow-2xl">
-                <div className="bg-[#1A0912] rounded-[14px] p-5 sm:p-6 space-y-5 overflow-hidden relative">
-                  {/* Image showcase */}
-                  <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
+                <div className="bg-[#1A0912] rounded-[14px] p-4 sm:p-5 space-y-4 overflow-hidden relative">
+                  {/* Hero Showcase Image */}
+                  <div className="relative rounded-xl overflow-hidden shadow-2xl group border border-[#FF8559]/30">
                     <img
-                      src={SALON_IMAGES.bridal}
-                      alt="Deluxe HS Bridal Beauty"
-                      className="w-full h-full object-cover transform hover:scale-105 transition duration-700"
+                      src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785005849/ChatGPT_Image_Jul_25_2026_11_54_29_PM_zhvyok.png"
+                      alt="Deluxe HS The Salon Luxury Showcase"
+                      className="w-full h-auto max-h-[420px] object-cover rounded-xl transform group-hover:scale-105 transition duration-700"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                    <div className="absolute bottom-3 left-3 right-3 flex justify-between items-end">
-                      <div>
-                        <span className="text-[10px] uppercase font-bold tracking-wider text-[#FFB578] bg-black/60 px-2 py-0.5 rounded">
-                          Signature Look
-                        </span>
-                        <h3 className="text-lg font-serif font-bold text-white">Bridal Makeover Studio</h3>
-                      </div>
-                      <span className="text-xs font-bold text-white bg-[#E65447] px-2.5 py-1 rounded-lg border border-[#FFB578]/40">
-                        Custom Glam
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1A0912] via-transparent to-transparent opacity-70" />
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#FFB578] bg-black/75 backdrop-blur-md px-3 py-1 rounded-full border border-[#FF8559]/40">
+                        Signature Executive Studio
+                      </span>
+                      <span className="text-xs font-bold text-white bg-[#E65447] px-3 py-1 rounded-full border border-[#FFB578]/40 shadow-md">
+                        Deluxe HS
                       </span>
                     </div>
                   </div>
 
-                  {/* Secondary Highlight Box */}
-                  <div className="bg-[#CF5376]/20 border border-[#FF8559]/30 rounded-xl p-3.5 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-[#E65447] flex items-center justify-center border border-[#FFB578]/40 text-white">
-                        <Award className="w-5 h-5" />
-                      </div>
+                  {/* Highlights Box below image */}
+                  <div className="relative rounded-xl p-4 bg-gradient-to-br from-[#28101A] to-[#1F0715] border border-[#FF8559]/30 space-y-3">
+                    <div className="flex items-center justify-between">
                       <div>
-                        <h4 className="text-xs font-bold text-[#FFB578]">Executive Fruit Waxing</h4>
-                        <p className="text-[11px] text-rose-200/80">Full Body Smooth Care</p>
+                        <span className="text-[10px] uppercase font-bold tracking-wider text-[#FFB578] block">
+                          Faisalabad's Choice
+                        </span>
+                        <h3 className="text-xl font-serif font-bold text-white mt-0.5">
+                          Executive Makeover & Hair Studio
+                        </h3>
+                      </div>
+                      <div className="w-10 h-10 rounded-xl bg-[#CF5376]/20 border border-[#FF8559]/40 flex items-center justify-center text-[#FFB578] shrink-0">
+                        <Heart className="w-5 h-5 fill-[#CF5376]" />
                       </div>
                     </div>
-                    <span className="text-xs font-bold text-white bg-[#CF5376] px-2.5 py-1 rounded-md">
-                      Special Care
-                    </span>
+
+                    <div className="space-y-1.5 text-xs text-rose-100/90 pt-1 border-t border-white/10">
+                      <div className="flex items-center gap-2">
+                        <Sparkles className="w-3.5 h-3.5 text-[#FF8559] shrink-0" />
+                        <span>Bridal Barat & Nikkah HD Airbrush Makeovers</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Sparkles className="w-3.5 h-3.5 text-[#FF8559] shrink-0" />
+                        <span>Hair Extenso & Keratin Protein Botox</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Sparkles className="w-3.5 h-3.5 text-[#FF8559] shrink-0" />
+                        <span>Executive Fruit Waxing & Hydra Glow Facials</span>
+                      </div>
+                    </div>
                   </div>
 
                   {/* Contact Guarantee */}
                   <div className="flex items-center gap-2 text-[11px] text-rose-200/80 pt-1 border-t border-white/10">
                     <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span>Direct call & WhatsApp support for queries & timings</span>
+                    <span>Direct WhatsApp & phone booking support available</span>
                   </div>
                 </div>
               </div>
 
               {/* Floating Badge */}
-              <div className="absolute -bottom-4 -left-4 bg-[#28101A] text-white p-3 rounded-xl border border-[#FF8559] shadow-xl flex items-center gap-3 hidden sm:flex">
+              <div className="absolute -bottom-4 -left-4 bg-[#28101A] text-white p-3 rounded-xl border border-[#FF8559] shadow-xl flex items-center gap-3 hidden sm:flex z-20">
                 <div className="w-8 h-8 rounded-full bg-[#FF8559] flex items-center justify-center text-white">
                   <Sparkles className="w-4 h-4" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold">100% Original Products</p>
-                  <p className="text-[10px] text-[#FFB578]">Executive Salon Faisalabad</p>
+                  <p className="text-xs font-bold">100% Certified Salon</p>
+                  <p className="text-[10px] text-[#FFB578]">People's Colony No 1, Faisalabad</p>
                 </div>
               </div>
             </div>
