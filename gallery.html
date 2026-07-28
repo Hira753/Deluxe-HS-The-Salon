@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Deluxe HS The Salon Work Showcase</title>
+  <meta name="description" content="Browse authentic transformations created by Deluxe HS The Salon, Master Stylist Hira Shah, including bridal makeup glams, hair botox, balayages, and nail art.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="top-bar-item"><i class="fa-solid fa-location-dot"></i> Plot 452, near Faysal Hospital, Block A People's Colony No 1, Faisalabad</span>
+        <span class="top-bar-item"><i class="fa-solid fa-clock"></i> Mon - Sun: 10:00 AM - 8:00 PM</span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><i class="fa-solid fa-phone"></i> Helpline: +92 301 3928585</span>
+        <span class="top-bar-item"><i class="fa-brands fa-instagram"></i> instagram.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-brand">
+        <div class="logo-icon">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785260190/ChatGPT_Image_Jul_28_2026_10_34_42_PM_kctc0b.png" alt="Deluxe HS The Salon Logo">
+        </div>
+        <div class="logo-text-wrapper">
+          <span class="logo-title">DELUXE <span>HS</span></span>
+          <span class="logo-subtitle">EXECUTIVE SALON & BRIDAL</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Our Services</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="location.html" class="nav-link">Contact & Location</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-menu-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Our Services</a></li>
+        <li><a href="gallery.html" class="mobile-nav-link active">Gallery</a></li>
+        <li><a href="reviews.html" class="mobile-nav-link">Reviews</a></li>
+        <li><a href="location.html" class="mobile-nav-link">Contact & Location</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section style="background: linear-gradient(180deg, #FFF0F5 0%, #FFF7FA 100%); padding: 3.5rem 0; text-align: center; border-bottom: 1px solid var(--border-pink);">
+    <div class="container">
+      <span class="badge-tag"><i class="fa-solid fa-camera"></i> Real Client Transformations</span>
+      <h1 class="section-title font-serif">Deluxe HS Portfolio Gallery</h1>
+      <p class="section-desc">Click any image to expand full-screen lightbox view.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Grid & Lightbox Section -->
+  <section style="padding: 4rem 0 5rem 0; background-color: var(--white);">
+    <div class="container">
+
+      <!-- Filter Buttons -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Portfolio</button>
+        <button class="filter-btn" data-filter="bridal">Bridal Transformations</button>
+        <button class="filter-btn" data-filter="hair">Hair Botox & Color</button>
+        <button class="filter-btn" data-filter="makeup">Party Makeup & Facials</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+
+        <!-- Item 1 -->
+        <div class="gallery-item" data-category="bridal" data-title="Executive Bridal Masterpiece" data-desc="Signature bridal makeover and high-definition luxury glam by Master Stylist Hira Shah at Deluxe HS The Salon.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785005849/ChatGPT_Image_Jul_25_2026_11_54_29_PM_zhvyok.png" alt="Executive Bridal Masterpiece">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Executive Bridal Masterpiece</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="gallery-item" data-category="bridal" data-title="Royal Barat Bridal Look" data-desc="Signature HD bridal makeup with traditional maroon dupatta draping, jewelry setting, and glam look by Master Stylist Hira Shah.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785254430/623235368_18422931241140813_8470001872830165028_n_gzydvr.jpg" alt="Royal Barat Bridal Look">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Royal Barat Bridal Look</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="gallery-item" data-category="bridal" data-title="Signature Bridal Makeover" data-desc="Flawless bridal makeover with gold eye accents, matte lipstick, and regal hair styling.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785254431/626415440_18423993643140813_6370372750981574888_n_prkcua.jpg" alt="Signature Bridal Makeover">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Signature Bridal Makeover</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-item" data-category="bridal" data-title="Nikkah & Reception Bridal Glam" data-desc="Elegantly draped Nikkah & Reception bridal look with delicate hair adornments and glowing complexion.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785254431/bride_1_zangtm.jpg" alt="Nikkah & Reception Bridal Glam">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Nikkah & Reception Bridal Glam</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-item" data-category="hair" data-title="Keratin Botox & Hair Restoration" data-desc="Silky smooth hair transformation with mirror shine Keratin Botox smoothing treatment.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785254624/ChatGPT_Image_Jul_28_2026_09_01_50_PM_rsfurr.png" alt="Keratin Botox & Hair Restoration">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Keratin Botox & Hair Restoration</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-item" data-category="hair" data-title="Dimensional Balayage & Highlights" data-desc="Custom hand-painted hair color with vibrant dimensional tones and blowdry styling.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785259285/ChatGPT_Image_Jul_28_2026_09_34_00_PM_fb73ul.png" alt="Dimensional Balayage & Highlights">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Dimensional Balayage & Highlights</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="gallery-item" data-category="makeup" data-title="Glam Party Makeup & Styling" data-desc="Stunning party makeup look with smokey eyes, flawless contour, and long-lasting airbrush finish.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785259285/ChatGPT_Image_Jul_28_2026_09_26_06_PM_r4esva.png" alt="Glam Party Makeup & Styling">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Glam Party Makeup & Styling</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="gallery-item" data-category="makeup" data-title="Skin Brightening Polish & Glow" data-desc="Deep hydration and organic facial polishing for radiant, glowing skin.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785259286/ChatGPT_Image_Jul_28_2026_09_23_54_PM_rbs1tx.png" alt="Skin Brightening Polish & Glow">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Skin Brightening Polish & Glow</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="gallery-item" data-category="hair" data-title="Precision Hair Cut & Style" data-desc="Modern hair styling with face-framing layers and sleek blowdry finish.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785259285/ChatGPT_Image_Jul_28_2026_09_38_26_PM_j7dsfi.png" alt="Precision Hair Cut & Style">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Precision Hair Cut & Style</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="gallery-item" data-category="makeup" data-title="Soft Engagement Glam" data-desc="Elegant soft eye makeup with radiant glowing finish for engagement & special events.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785259286/ChatGPT_Image_Jul_28_2026_09_30_43_PM_iz4auw.png" alt="Soft Engagement Glam">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Soft Engagement Glam</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 10 -->
+        <div class="gallery-item" data-category="hair" data-title="Ash Blonde Color & Cut" data-desc="Modern ash blonde color transformation with face framing cuts and glossing toner.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785259288/ChatGPT_Image_Jul_28_2026_09_38_32_PM_wdnz60.png" alt="Ash Blonde Color & Cut">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Ash Blonde Color & Cut</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 11 -->
+        <div class="gallery-item" data-category="makeup" data-title="Luxury Hydrating Facial & Glow" data-desc="Relaxing facial therapy restoring deep skin nourishment and natural radiant glow.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785259288/ChatGPT_Image_Jul_28_2026_09_22_18_PM_tcdh1q.png" alt="Luxury Hydrating Facial & Glow">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Luxury Hydrating Facial & Glow</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 12 -->
+        <div class="gallery-item" data-category="hair" data-title="Protein Hair Repair Treatment" data-desc="Deep conditioning and intense hair repair treatment for ultra healthy, smooth hair.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785259289/ChatGPT_Image_Jul_28_2026_09_46_35_PM_lqzvvm.png" alt="Protein Hair Repair Treatment">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Protein Hair Repair Treatment</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 13 -->
+        <div class="gallery-item" data-category="bridal" data-title="Traditional Bridal Makeover" data-desc="Vibrant traditional bridal makeover with intricate eye details, dupatta draping, and jewelry setting.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785259289/ChatGPT_Image_Jul_28_2026_10_18_56_PM_vlsjcz.png" alt="Traditional Bridal Makeover">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Traditional Bridal Makeover</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 14 -->
+        <div class="gallery-item" data-category="hair" data-title="Velvet Gloss & Styling" data-desc="Lustrous hair gloss treatment with soft voluminous blowdry curls.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785259290/ChatGPT_Image_Jul_28_2026_09_43_50_PM_cfqmbz.png" alt="Velvet Gloss & Styling">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Velvet Gloss & Styling</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+        <!-- Item 15 -->
+        <div class="gallery-item" data-category="makeup" data-title="HD Airbrush Glam Makeover" data-desc="Flawless HD airbrush makeup finish with long-lasting full coverage and radiant glow.">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785259296/ChatGPT_Image_Jul_28_2026_09_40_46_PM_m0r8pr.png" alt="HD Airbrush Glam Makeover">
+          <div class="gallery-overlay">
+            <span class="gallery-title">HD Airbrush Glam Makeover</span>
+            <span class="gallery-tag"><i class="fa-solid fa-eye"></i> Click to Enlarge</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <div class="lightbox-content">
+      <button id="lightbox-close" class="lightbox-close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="lightbox-img-wrapper">
+        <img id="lightbox-img" src="" alt="Expanded View">
+      </div>
+      <div class="lightbox-details">
+        <span class="badge-tag"><i class="fa-solid fa-crown"></i> Signature Work</span>
+        <h3 id="lightbox-title" class="font-serif" style="font-size: 1.6rem; font-weight: 700; color: var(--text-dark); margin: 0.5rem 0;">Work Title</h3>
+        <p id="lightbox-desc" style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">Work Description</p>
+        <a href="booking.html" class="btn btn-primary btn-sm" style="align-self: flex-start;">
+          <i class="fa-solid fa-calendar-plus"></i> Inquire This Look
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo-brand" style="margin-bottom: 1rem;">
+            <div class="logo-icon">
+              <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785260190/ChatGPT_Image_Jul_28_2026_10_34_42_PM_kctc0b.png" alt="Deluxe HS The Salon Logo">
+            </div>
+            <div class="logo-text-wrapper">
+              <span class="logo-title" style="color: var(--white);">DELUXE <span style="color: var(--primary-pink);">HS</span></span>
+              <span class="logo-subtitle" style="color: var(--pink-light);">EXECUTIVE SALON & BRIDAL</span>
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 1.2rem;">
+            Official Executive Makeover Studio in Faisalabad. Setting gold standards in bridal art, hair styling, skin hydration, and organic body pampering.
+          </p>
+          <div class="social-links-row">
+            <a href="https://instagram.com/deluxehs.thesalon" target="_blank" class="social-icon-btn" title="Instagram @deluxehs.thesalon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/deluxehs.thesalon" target="_blank" class="social-icon-btn" title="Facebook Page"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://tiktok.com/@deluxehs.salon" target="_blank" class="social-icon-btn" title="TikTok @deluxehs.salon"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/923013928585" target="_blank" class="social-icon-btn" title="WhatsApp 0301-3928585"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="about.html">About Deluxe HS</a></li>
+            <li><a href="services.html">Services Catalog</a></li>
+            <li><a href="gallery.html">Work Gallery</a></li>
+            <li><a href="reviews.html">Client Reviews</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Details</h4>
+          <ul class="footer-links">
+            <li><i class="fa-solid fa-location-dot text-gold"></i> Plot 452, near Faysal Hospital, Block A People's Colony No 1, Faisalabad</li>
+            <li><i class="fa-solid fa-phone text-gold"></i> Call / WhatsApp: +92 301 3928585</li>
+            <li><i class="fa-solid fa-envelope text-gold"></i> appointments@deluxehs.pk</li>
+            <li><i class="fa-solid fa-clock text-gold"></i> Open 7 Days: 10:00 AM - 8:00 PM</li>
+            <li><i class="fa-solid fa-venus text-gold"></i> Identifies as Women-Owned</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Booking</h4>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-bottom: 1rem;">
+            Need an urgent appointment or bridal consultation? Chat directly with our manager on WhatsApp.
+          </p>
+          <a href="https://wa.me/923013928585" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp +92 301 3928585
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Deluxe HS The Salon. All Rights Reserved.</p>
+        <p>Crafted with elegance, organic care & salon precision.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

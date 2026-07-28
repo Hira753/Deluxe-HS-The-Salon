@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment - Deluxe HS The Salon Faisalabad</title>
+  <meta name="description" content="Book your luxury salon appointment online at Deluxe HS The Salon in Faisalabad. Select bridal makeup, hair color, hair botox, facials, manicures, and waxings.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="top-bar-item"><i class="fa-solid fa-location-dot"></i> Plot 452, near Faysal Hospital, Block A People's Colony No 1, Faisalabad</span>
+        <span class="top-bar-item"><i class="fa-solid fa-clock"></i> Mon - Sun: 10:00 AM - 8:00 PM</span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><i class="fa-solid fa-phone"></i> Helpline: +92 301 3928585</span>
+        <span class="top-bar-item"><i class="fa-brands fa-instagram"></i> instagram.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-brand">
+        <div class="logo-icon">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785260190/ChatGPT_Image_Jul_28_2026_10_34_42_PM_kctc0b.png" alt="Deluxe HS The Salon Logo">
+        </div>
+        <div class="logo-text-wrapper">
+          <span class="logo-title">DELUXE <span>HS</span></span>
+          <span class="logo-subtitle">EXECUTIVE SALON & BRIDAL</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Our Services</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="location.html" class="nav-link">Contact & Location</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-menu-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Our Services</a></li>
+        <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="reviews.html" class="mobile-nav-link">Reviews</a></li>
+        <li><a href="location.html" class="mobile-nav-link">Contact & Location</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section style="background: linear-gradient(180deg, #FFF0F5 0%, #FFF7FA 100%); padding: 3.5rem 0; text-align: center; border-bottom: 1px solid var(--border-pink);">
+    <div class="container">
+      <span class="badge-tag"><i class="fa-solid fa-calendar-plus"></i> Online Reservations</span>
+      <h1 class="section-title font-serif">Book An Appointment</h1>
+      <p class="section-desc">Select your desired service, date, and time slot to reserve your VIP session at Deluxe HS The Salon.</p>
+    </div>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section style="padding: 4rem 0 5rem 0; background-color: var(--white);">
+    <div class="container" style="max-width: 800px;">
+
+      <div class="form-card">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--pink-light); color: var(--primary-pink); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin: 0 auto 1rem auto;">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <h2 class="font-serif" style="font-size: 1.75rem; font-weight: 700; color: var(--text-dark);">Appointment Details</h2>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Please fill out the form below. Confirmation will be sent instantly.</p>
+        </div>
+
+        <form id="booking-form" class="form-grid">
+          <!-- Full Name -->
+          <div class="form-group">
+            <label for="booking-name" class="form-label">Full Name *</label>
+            <input type="text" id="booking-name" class="form-input" placeholder="e.g. Sana Ahmed" required>
+          </div>
+
+          <!-- Phone Number -->
+          <div class="form-group">
+            <label for="booking-phone" class="form-label">Phone Number *</label>
+            <input type="tel" id="booking-phone" class="form-input" placeholder="e.g. 0301 3928585" required>
+          </div>
+
+          <!-- Email Address -->
+          <div class="form-group full-width">
+            <label for="booking-email" class="form-label">Email Address (Optional)</label>
+            <input type="email" id="booking-email" class="form-input" placeholder="sana@example.com">
+          </div>
+
+          <!-- Service Selection -->
+          <div class="form-group full-width">
+            <label for="booking-service" class="form-label">Select Service *</label>
+            <select id="booking-service" class="form-select" required>
+              <option value="" disabled selected>-- Choose a Salon Service --</option>
+              <optgroup label="Hair Care & Styling">
+                <option value="Hair Cut">Precision Hair Cut & Style (Rs 2,500)</option>
+                <option value="Hair Coloring">Hair Coloring & Balayage (Rs 12,000)</option>
+                <option value="Hair Styling">Hair Styling & Updos (Rs 3,500)</option>
+                <option value="Hair Botox">Hair Extenso & Keratin Botox (Rs 15,000)</option>
+              </optgroup>
+              <optgroup label="Bridal & Makeover">
+                <option value="Bridal Makeup">HD Airbrush Bridal Makeup (Rs 35,000)</option>
+                <option value="Party Makeup">Signature Party Makeup (Rs 8,500)</option>
+              </optgroup>
+              <optgroup label="Skin & Facials">
+                <option value="Facial">Hydra Glow Organic Facial (Rs 6,500)</option>
+                <option value="Skin Care">Skin Brightening Polish & Glow (Rs 4,000)</option>
+              </optgroup>
+              <optgroup label="Nail Care">
+                <option value="Manicure">Deluxe Spa Manicure (Rs 2,500)</option>
+                <option value="Pedicure">Herbal Relaxation Pedicure (Rs 3,000)</option>
+                <option value="Nail Art">Custom Acrylic & Gel Nail Art (Rs 4,500)</option>
+              </optgroup>
+              <optgroup label="Spa & Massage">
+                <option value="Spa Waxing">Full Body Organic Fruit Wax (Rs 5,500)</option>
+                <option value="Massage">Aromatherapy Relaxation Massage (Rs 7,000)</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <!-- Preferred Date -->
+          <div class="form-group">
+            <label for="booking-date" class="form-label">Preferred Date *</label>
+            <input type="date" id="booking-date" class="form-input" required>
+          </div>
+
+          <!-- Preferred Time -->
+          <div class="form-group">
+            <label for="booking-time" class="form-label">Preferred Time Slot *</label>
+            <select id="booking-time" class="form-select" required>
+              <option value="" disabled selected>-- Select Time --</option>
+              <option value="10:00 AM">10:00 AM (Morning)</option>
+              <option value="12:00 PM">12:00 PM (Noon)</option>
+              <option value="02:00 PM">02:00 PM (Afternoon)</option>
+              <option value="04:00 PM">04:00 PM (Evening)</option>
+              <option value="06:00 PM">06:00 PM (Late Evening)</option>
+            </select>
+          </div>
+
+          <!-- Notes / Requests -->
+          <div class="form-group full-width">
+            <label for="booking-notes" class="form-label">Special Requests / Notes</label>
+            <textarea id="booking-notes" class="form-textarea" placeholder="e.g. Requesting Master Stylist Hira Shah, or mentioning any skin allergies."></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-group full-width" style="margin-top: 1rem;">
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              <i class="fa-solid fa-paper-plane"></i> Confirm Appointment Reservation
+            </button>
+          </div>
+        </form>
+
+        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-pink); text-align: center; font-size: 0.85rem; color: var(--text-muted);">
+          <p><i class="fa-solid fa-lock text-gold"></i> Your information is kept strictly confidential. Need immediate phone support? Call <strong>0301-3928585</strong>.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo-brand" style="margin-bottom: 1rem;">
+            <div class="logo-icon">
+              <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785260190/ChatGPT_Image_Jul_28_2026_10_34_42_PM_kctc0b.png" alt="Deluxe HS The Salon Logo">
+            </div>
+            <div class="logo-text-wrapper">
+              <span class="logo-title" style="color: var(--white);">DELUXE <span style="color: var(--primary-pink);">HS</span></span>
+              <span class="logo-subtitle" style="color: var(--pink-light);">EXECUTIVE SALON & BRIDAL</span>
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 1.2rem;">
+            Official Executive Makeover Studio in Faisalabad. Setting gold standards in bridal art, hair styling, skin hydration, and organic body pampering.
+          </p>
+          <div class="social-links-row">
+            <a href="https://instagram.com/deluxehs.thesalon" target="_blank" class="social-icon-btn" title="Instagram @deluxehs.thesalon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/deluxehs.thesalon" target="_blank" class="social-icon-btn" title="Facebook Page"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://tiktok.com/@deluxehs.salon" target="_blank" class="social-icon-btn" title="TikTok @deluxehs.salon"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/923013928585" target="_blank" class="social-icon-btn" title="WhatsApp 0301-3928585"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="about.html">About Deluxe HS</a></li>
+            <li><a href="services.html">Services Catalog</a></li>
+            <li><a href="gallery.html">Work Gallery</a></li>
+            <li><a href="reviews.html">Client Reviews</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Details</h4>
+          <ul class="footer-links">
+            <li><i class="fa-solid fa-location-dot text-gold"></i> Plot 452, near Faysal Hospital, Block A People's Colony No 1, Faisalabad</li>
+            <li><i class="fa-solid fa-phone text-gold"></i> Call / WhatsApp: +92 301 3928585</li>
+            <li><i class="fa-solid fa-envelope text-gold"></i> appointments@deluxehs.pk</li>
+            <li><i class="fa-solid fa-clock text-gold"></i> Open 7 Days: 10:00 AM - 8:00 PM</li>
+            <li><i class="fa-solid fa-venus text-gold"></i> Identifies as Women-Owned</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Booking</h4>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-bottom: 1rem;">
+            Need an urgent appointment or bridal consultation? Chat directly with our manager on WhatsApp.
+          </p>
+          <a href="https://wa.me/923013928585" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp +92 301 3928585
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Deluxe HS The Salon. All Rights Reserved.</p>
+        <p>Crafted with elegance, organic care & salon precision.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

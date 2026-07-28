@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Deluxe HS The Salon Faisalabad</title>
+  <meta name="description" content="Explore Deluxe HS The Salon's full service menu: Hair Cut, Hair Color, Bridal Makeup, Party Makeup, Hydra Facial, Manicure, Pedicure, Nail Art, Spa Waxing, Massage, and Skin Care.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="top-bar-item"><i class="fa-solid fa-location-dot"></i> Plot 452, near Faysal Hospital, Block A People's Colony No 1, Faisalabad</span>
+        <span class="top-bar-item"><i class="fa-solid fa-clock"></i> Mon - Sun: 10:00 AM - 8:00 PM</span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><i class="fa-solid fa-phone"></i> Helpline: +92 301 3928585</span>
+        <span class="top-bar-item"><i class="fa-brands fa-instagram"></i> instagram.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-brand">
+        <div class="logo-icon">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785260190/ChatGPT_Image_Jul_28_2026_10_34_42_PM_kctc0b.png" alt="Deluxe HS The Salon Logo">
+        </div>
+        <div class="logo-text-wrapper">
+          <span class="logo-title">DELUXE <span>HS</span></span>
+          <span class="logo-subtitle">EXECUTIVE SALON & BRIDAL</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link active">Our Services</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="location.html" class="nav-link">Contact & Location</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-menu-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li><a href="services.html" class="mobile-nav-link active">Our Services</a></li>
+        <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="reviews.html" class="mobile-nav-link">Reviews</a></li>
+        <li><a href="location.html" class="mobile-nav-link">Contact & Location</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section style="background: linear-gradient(180deg, #FFF0F5 0%, #FFF7FA 100%); padding: 3.5rem 0; text-align: center; border-bottom: 1px solid var(--border-pink);">
+    <div class="container">
+      <span class="badge-tag"><i class="fa-solid fa-scissors"></i> Comprehensive Beauty Menu</span>
+      <h1 class="section-title font-serif">Executive Services & Pricing</h1>
+      <p class="section-desc">Premium salon treatments performed by experienced senior technicians using organic formulations.</p>
+    </div>
+  </section>
+
+  <!-- Services Grid & Filter Section -->
+  <section style="padding: 4rem 0 5rem 0; background-color: var(--white);">
+    <div class="container">
+
+      <!-- Category Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Services</button>
+        <button class="filter-btn" data-filter="hair">Hair Styling & Color</button>
+        <button class="filter-btn" data-filter="makeup">Bridal & Party Makeup</button>
+        <button class="filter-btn" data-filter="skin">Facial & Skin Care</button>
+        <button class="filter-btn" data-filter="nails">Manicure, Pedicure & Nails</button>
+        <button class="filter-btn" data-filter="spa">Spa, Massage & Waxing</button>
+      </div>
+
+      <!-- Services Grid Container -->
+      <div class="services-grid">
+
+        <!-- 1. Hair Cut -->
+        <div class="service-card" data-category="hair">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800" alt="Hair Cut">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category"><i class="fa-solid fa-scissors"></i> Hair Care</span>
+              <h3 class="service-title">Hair Cut & Precision Styling</h3>
+              <p class="service-desc">Customized face-framing layer cuts, bob trims, curtain bangs, split end removal, and signature blowdry finish.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 45 Mins</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Hair Coloring -->
+        <div class="service-card" data-category="hair">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800" alt="Hair Coloring">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category"><i class="fa-solid fa-palette"></i> Hair Care</span>
+              <h3 class="service-title">Hair Coloring & Balayage</h3>
+              <p class="service-desc">Ammonia-free dimensional balayage, ombre highlights, root touch-up, and glossing toner treatment for rich shine.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 2.5 Hours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Hair Styling -->
+        <div class="service-card" data-category="hair">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&q=80&w=800" alt="Hair Styling">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category"><i class="fa-solid fa-wand-magic-sparkles"></i> Hair Care</span>
+              <h3 class="service-title">Hair Styling & Updos</h3>
+              <p class="service-desc">Elegant party updos, Hollywood mermaid waves, floral braid bun settings, and long-lasting curling locks.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 1 Hour</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Hair Botox & Extenso -->
+        <div class="service-card" data-category="hair">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800" alt="Hair Botox">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category"><i class="fa-solid fa-shield-halved"></i> Hair Care</span>
+              <h3 class="service-title">Hair Extenso & Keratin Botox</h3>
+              <p class="service-desc">Formaldehyde-free intensive protein smoothing that repairs cuticles, eliminates frizz, and adds mirror shine for 6 months.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 3.5 Hours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Bridal Makeup -->
+        <div class="service-card" data-category="makeup">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=800" alt="Bridal Makeup">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category"><i class="fa-solid fa-crown"></i> Makeover</span>
+              <h3 class="service-title">HD Airbrush Bridal Makeup</h3>
+              <p class="service-desc">Complete Barat or Nikkah transformation including HD foundation, lash application, dupatta setting, and jewelry draping.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 4 Hours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Party Makeup -->
+        <div class="service-card" data-category="makeup">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=800" alt="Party Makeup">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category"><i class="fa-solid fa-sparkles"></i> Makeover</span>
+              <h3 class="service-title">Signature Party Makeup</h3>
+              <p class="service-desc">Glamorous soft eye look, flawless contour, mink lashes, and sleek hair styling for wedding receptions or special events.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 1.5 Hours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Facial -->
+        <div class="service-card" data-category="skin">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800" alt="Hydra Facial">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category"><i class="fa-solid fa-water"></i> Skin Care</span>
+              <h3 class="service-title">Hydra Glow Organic Facial</h3>
+              <p class="service-desc">7-step deep pore cleansing, vacuum blackhead extraction, vitamin C serum infusion, and hyaluronic LED mask therapy.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 1 Hour</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Skin Care -->
+        <div class="service-card" data-category="skin">
+          <div class="service-img-box">
+            <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785251237/Skin-Polishing_1024x400_bewrfi.webp" alt="Skin Brightening Polish & Glow">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category"><i class="fa-solid fa-sun"></i> Skin Care</span>
+              <h3 class="service-title">Skin Brightening Polish & Glow</h3>
+              <p class="service-desc">Exfoliating organic herbal skin polish treatment designed to lighten tan lines, restore elasticity, and even skin tone.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 45 Mins</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Manicure -->
+        <div class="service-card" data-category="nails">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=800" alt="Manicure">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category"><i class="fa-solid fa-hand"></i> Nail Care</span>
+              <h3 class="service-title">Deluxe Spa Manicure</h3>
+              <p class="service-desc">Soaking hand bath, cuticle care, scrub exfoliation, relaxing hand massage, and long-lasting gel nail paint finish.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 40 Mins</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Pedicure -->
+        <div class="service-card" data-category="nails">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=800" alt="Pedicure">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category"><i class="fa-solid fa-shoe-prints"></i> Nail Care</span>
+              <h3 class="service-title">Herbal Relaxation Pedicure</h3>
+              <p class="service-desc">Warm mineral salt foot soak, heel callus buffing, dead skin removal, reflexology massage, and polished toe nails.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 50 Mins</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. Nail Art -->
+        <div class="service-card" data-category="nails">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&q=80&w=800" alt="Nail Art">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category"><i class="fa-solid fa-gem"></i> Nail Care</span>
+              <h3 class="service-title">Custom Acrylic & Gel Nail Art</h3>
+              <p class="service-desc">Full set acrylic extension with French tips, ombre chrome finishes, 3D glitter embellishments, and UV seal coat.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 1.5 Hours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. Spa Waxing -->
+        <div class="service-card" data-category="spa">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=800" alt="Spa Waxing">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category"><i class="fa-solid fa-spa"></i> Spa & Waxing</span>
+              <h3 class="service-title">Full Body Organic Fruit Wax</h3>
+              <p class="service-desc">Painless organic fruit wax application suitable for sensitive skin. Leaves skin silky smooth without redness or ingrown hairs.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 1 Hour</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13. Massage -->
+        <div class="service-card" data-category="spa">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=800" alt="Aromatherapy Massage">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category"><i class="fa-solid fa-hands-holding"></i> Spa & Massage</span>
+              <h3 class="service-title">Aromatherapy Relaxation Massage</h3>
+              <p class="service-desc">Full body stress relief oil massage targeting shoulder tension, improving blood circulation in private peaceful suites.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 1 Hour</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo-brand" style="margin-bottom: 1rem;">
+            <div class="logo-icon">
+              <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785260190/ChatGPT_Image_Jul_28_2026_10_34_42_PM_kctc0b.png" alt="Deluxe HS The Salon Logo">
+            </div>
+            <div class="logo-text-wrapper">
+              <span class="logo-title" style="color: var(--white);">DELUXE <span style="color: var(--primary-pink);">HS</span></span>
+              <span class="logo-subtitle" style="color: var(--pink-light);">EXECUTIVE SALON & BRIDAL</span>
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 1.2rem;">
+            Official Executive Makeover Studio in Faisalabad. Setting gold standards in bridal art, hair styling, skin hydration, and organic body pampering.
+          </p>
+          <div class="social-links-row">
+            <a href="https://instagram.com/deluxehs.thesalon" target="_blank" class="social-icon-btn" title="Instagram @deluxehs.thesalon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/deluxehs.thesalon" target="_blank" class="social-icon-btn" title="Facebook Page"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://tiktok.com/@deluxehs.salon" target="_blank" class="social-icon-btn" title="TikTok @deluxehs.salon"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/923013928585" target="_blank" class="social-icon-btn" title="WhatsApp 0301-3928585"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="about.html">About Deluxe HS</a></li>
+            <li><a href="services.html">Services Catalog</a></li>
+            <li><a href="gallery.html">Work Gallery</a></li>
+            <li><a href="reviews.html">Client Reviews</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Details</h4>
+          <ul class="footer-links">
+            <li><i class="fa-solid fa-location-dot text-gold"></i> Plot 452, near Faysal Hospital, Block A People's Colony No 1, Faisalabad</li>
+            <li><i class="fa-solid fa-phone text-gold"></i> Call / WhatsApp: +92 301 3928585</li>
+            <li><i class="fa-solid fa-envelope text-gold"></i> appointments@deluxehs.pk</li>
+            <li><i class="fa-solid fa-clock text-gold"></i> Open 7 Days: 10:00 AM - 8:00 PM</li>
+            <li><i class="fa-solid fa-venus text-gold"></i> Identifies as Women-Owned</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Booking</h4>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-bottom: 1rem;">
+            Need an urgent appointment or bridal consultation? Chat directly with our manager on WhatsApp.
+          </p>
+          <a href="https://wa.me/923013928585" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp +92 301 3928585
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Deluxe HS The Salon. All Rights Reserved.</p>
+        <p>Crafted with elegance, organic care & salon precision.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

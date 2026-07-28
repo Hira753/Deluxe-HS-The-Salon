@@ -1,13 +1,286 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deluxe HS The Salon - Executive Makeover & Bridal Studio</title>
+  <meta name="description" content="Luxury beauty salon in Faisalabad offering bridal makeup, hair color, hair botox, hydra facials, manicures, and organic fruit waxing.">
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
 
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="top-bar-item"><i class="fa-solid fa-location-dot"></i> Plot 452, near Faysal Hospital, Block A People's Colony No 1, Faisalabad</span>
+        <span class="top-bar-item"><i class="fa-solid fa-clock"></i> Mon - Sun: 10:00 AM - 8:00 PM</span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><i class="fa-solid fa-phone"></i> Helpline: +92 301 3928585</span>
+        <span class="top-bar-item"><i class="fa-brands fa-instagram"></i> instagram.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-brand">
+        <div class="logo-icon">
+          <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785260190/ChatGPT_Image_Jul_28_2026_10_34_42_PM_kctc0b.png" alt="Deluxe HS The Salon Logo">
+        </div>
+        <div class="logo-text-wrapper">
+          <span class="logo-title">DELUXE <span>HS</span></span>
+          <span class="logo-subtitle">EXECUTIVE SALON & BRIDAL</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Our Services</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="location.html" class="nav-link">Contact & Location</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-menu-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Our Services</a></li>
+        <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="reviews.html" class="mobile-nav-link">Reviews</a></li>
+        <li><a href="location.html" class="mobile-nav-link">Contact & Location</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Banner Section -->
+  <section class="hero-section">
+    <div class="container hero-grid" style="grid-template-columns: 1fr; max-width: 900px; text-align: center; margin: 0 auto;">
+      <div class="hero-content">
+        <div class="hero-badges-wrapper" style="justify-content: center;">
+          <span class="badge-tag"><i class="fa-solid fa-award"></i> Premier Executive Branch</span>
+          <span class="badge-tag"><i class="fa-solid fa-leaf"></i> 100% Organic Products</span>
+        </div>
+
+        <h1 class="hero-title font-serif">
+          Experience Pinnacle <span class="text-gradient-pink">Luxury & Beauty</span> Elegance
+        </h1>
+
+        <p class="hero-subtitle" style="margin-left: auto; margin-right: auto;">
+          Welcome to Deluxe HS The Salon in Faisalabad. Master Stylist Hira Shah and senior technicians deliver bespoke bridal glams, keratin botox hair smoothings, organic fruit waxing, and radiant hydra facials.
+        </p>
+
+        <div class="hero-stats-row" style="justify-content: center;">
+          <div class="stat-item">
+            <h4>31.3K+</h4>
+            <p>Instagram Fans</p>
+          </div>
+          <div class="stat-item">
+            <h4>5.0 ★</h4>
+            <p>Rated Studio</p>
+          </div>
+          <div class="stat-item">
+            <h4>100%</h4>
+            <p>Organic Safety</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome Introduction Section -->
+  <section style="padding: 5rem 0; background-color: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-tag"><i class="fa-solid fa-heart"></i> Why Deluxe HS</span>
+        <h2 class="section-title font-serif">Unmatched Precision & Pampering</h2>
+        <p class="section-desc">
+          We combine internationally certified master techniques with dermatologically approved organic formulations so you feel relaxed, valued, and radiant.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        <div style="background: var(--pink-lighter); border: 1px solid var(--border-pink); padding: 2rem; border-radius: var(--radius-lg); text-align: center;">
+          <div style="width: 56px; height: 56px; background: var(--white); color: var(--primary-pink); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1.2rem auto; box-shadow: var(--shadow-sm);">
+            <i class="fa-solid fa-user-check"></i>
+          </div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-dark);">Master Stylists</h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">Led by Creative Director Hira Shah with over 12+ years of bridal and hair restoration experience.</p>
+        </div>
+
+        <div style="background: var(--pink-lighter); border: 1px solid var(--border-pink); padding: 2rem; border-radius: var(--radius-lg); text-align: center;">
+          <div style="width: 56px; height: 56px; background: var(--white); color: var(--primary-pink); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1.2rem auto; box-shadow: var(--shadow-sm);">
+            <i class="fa-solid fa-shield-virus"></i>
+          </div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-dark);">Strict Hygiene Standards</h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">Single-use towels, disposable waxing kits, and medical-grade tool sterilization after every client.</p>
+        </div>
+
+        <div style="background: var(--pink-lighter); border: 1px solid var(--border-pink); padding: 2rem; border-radius: var(--radius-lg); text-align: center;">
+          <div style="width: 56px; height: 56px; background: var(--white); color: var(--primary-pink); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1.2rem auto; box-shadow: var(--shadow-sm);">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-dark);">Private VIP Lounges</h3>
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">Dedicated private bridal suites designed for comfort, privacy, and full photography lighting prep.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Services Preview -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-tag"><i class="fa-solid fa-sparkles"></i> Popular Choices</span>
+        <h2 class="section-title font-serif">Featured Salon Services</h2>
+        <p class="section-desc">Handpicked client favorites crafted to elevate your natural glow.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800" alt="Hair Cut & Blowdry">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category">Hair Styling</span>
+              <h3 class="service-title">Precision Hair Cut & Style</h3>
+              <p class="service-desc">Customized layer cuts, face-framing bobs, and volume blowdry styled by senior technicians.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 45 Mins</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=800" alt="Bridal Makeup">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category">Bridal Makeup</span>
+              <h3 class="service-title">HD Airbrush Bridal Glam</h3>
+              <p class="service-desc">Waterproof long-lasting bridal makeover with eyelash extension, dupatta drape & jewelry fitting.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 4 Hours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-img-box">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800" alt="Keratin Botox">
+          </div>
+          <div class="service-body">
+            <div>
+              <span class="service-category">Hair Treatment</span>
+              <h3 class="service-title">Hair Extenso & Keratin Botox</h3>
+              <p class="service-desc">Protein-rich smoothing treatment that repairs split ends and eliminates frizz for 6+ months.</p>
+            </div>
+            <div class="service-footer">
+              <span><i class="fa-solid fa-clock"></i> 3.5 Hours</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="services.html" class="btn btn-outline btn-lg">
+          View All Services <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1 -->
+        <div>
+          <div class="logo-brand" style="margin-bottom: 1rem;">
+            <div class="logo-icon">
+              <img src="https://res.cloudinary.com/irbsm5bs/image/upload/v1785260190/ChatGPT_Image_Jul_28_2026_10_34_42_PM_kctc0b.png" alt="Deluxe HS The Salon Logo">
+            </div>
+            <div class="logo-text-wrapper">
+              <span class="logo-title" style="color: var(--white);">DELUXE <span style="color: var(--primary-pink);">HS</span></span>
+              <span class="logo-subtitle" style="color: var(--pink-light);">EXECUTIVE SALON & BRIDAL</span>
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 1.2rem;">
+            Official Executive Makeover Studio in Faisalabad. Setting gold standards in bridal art, hair styling, skin hydration, and organic body pampering.
+          </p>
+          <div class="social-links-row">
+            <a href="https://instagram.com/deluxehs.thesalon" target="_blank" class="social-icon-btn" title="Instagram @deluxehs.thesalon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/deluxehs.thesalon" target="_blank" class="social-icon-btn" title="Facebook Page"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://tiktok.com/@deluxehs.salon" target="_blank" class="social-icon-btn" title="TikTok @deluxehs.salon"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/923013928585" target="_blank" class="social-icon-btn" title="WhatsApp 0301-3928585"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="about.html">About Deluxe HS</a></li>
+            <li><a href="services.html">Services Catalog</a></li>
+            <li><a href="gallery.html">Work Gallery</a></li>
+            <li><a href="reviews.html">Client Reviews</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="footer-col">
+          <h4>Contact Details</h4>
+          <ul class="footer-links">
+            <li><i class="fa-solid fa-location-dot text-gold"></i> Plot 452, near Faysal Hospital, Block A People's Colony No 1, Faisalabad</li>
+            <li><i class="fa-solid fa-phone text-gold"></i> Call / WhatsApp: +92 301 3928585</li>
+            <li><i class="fa-solid fa-envelope text-gold"></i> appointments@deluxehs.pk</li>
+            <li><i class="fa-solid fa-clock text-gold"></i> Open 7 Days: 10:00 AM - 8:00 PM</li>
+            <li><i class="fa-solid fa-venus text-gold"></i> Identifies as Women-Owned</li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div class="footer-col">
+          <h4>Direct Booking</h4>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-bottom: 1rem;">
+            Need an urgent appointment or bridal consultation? Chat directly with our manager on WhatsApp.
+          </p>
+          <a href="https://wa.me/923013928585" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp +92 301 3928585
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Deluxe HS The Salon. All Rights Reserved.</p>
+        <p>Crafted with elegance, organic care & salon precision.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

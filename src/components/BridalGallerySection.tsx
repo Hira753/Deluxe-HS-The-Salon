@@ -84,22 +84,22 @@ export const BridalGallerySection: React.FC = () => {
     : REAL_BRIDAL_GALLERY.filter((item) => item.category === activeTab);
 
   return (
-    <section id="bridal-gallery" className="py-16 md:py-24 bg-[#1A0912] text-white relative border-t border-b border-[#CF5376]/30 overflow-hidden">
+    <section id="bridal-gallery" className="py-16 md:py-20 bg-gradient-to-b from-[#FFF7FA] to-[#FFF0F5] text-gray-800 relative border-t border-b border-pink-200 overflow-hidden">
       {/* Decorative Glow */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#CF5376]/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#FF8559]/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-pink-200/40 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-rose-200/30 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#CF5376]/20 border border-[#FF8559]/40 text-[#FFB578] text-xs font-semibold uppercase tracking-widest">
-            <Sparkles className="w-3.5 h-3.5 text-[#FF8559]" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-pink-100 border border-pink-200 text-[#DB2777] text-xs font-semibold uppercase tracking-widest">
+            <Sparkles className="w-3.5 h-3.5 text-[#EC4899]" />
             Deluxe HS Real Work
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-gray-900">
             Bridal Transformations & Hairstyles
           </h2>
-          <p className="text-rose-100/80 text-sm sm:text-base font-light leading-relaxed">
+          <p className="text-pink-950/80 text-sm sm:text-base font-normal leading-relaxed">
             Explore authentic transformations created by Master Stylist Hira Shah and team — featuring Barat bridal glams, Nikkah soft makeups, and handcrafted floral hairstyles.
           </p>
         </div>
@@ -112,10 +112,10 @@ export const BridalGallerySection: React.FC = () => {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-5 py-2.5 rounded-full text-xs font-semibold transition-all duration-300 cursor-pointer border ${
+                className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-300 cursor-pointer border ${
                   isActive
-                    ? 'bg-gradient-to-r from-[#CF5376] via-[#E65447] to-[#FF8559] text-white font-bold border-[#FF8559] shadow-lg scale-105'
-                    : 'bg-[#28101A]/80 text-rose-100/80 hover:text-white hover:bg-[#E65447]/30 border-[#CF5376]/30'
+                    ? 'bg-gradient-to-r from-[#EC4899] via-[#F472B6] to-[#FB7185] text-white border-pink-300 shadow-sm scale-105'
+                    : 'bg-white text-gray-700 hover:bg-pink-50 border-pink-200'
                 }`}
               >
                 {tab}
@@ -133,24 +133,24 @@ export const BridalGallerySection: React.FC = () => {
             return (
               <div
                 key={item.id}
-                className="bg-[#28101A] rounded-2xl border border-[#FF8559]/30 overflow-hidden shadow-xl hover:border-[#CF5376] transition-all duration-300 group flex flex-col justify-between"
+                className="bg-white rounded-3xl border border-pink-200 overflow-hidden shadow-sm hover:border-[#EC4899] hover:shadow-md transition-all duration-300 group flex flex-col justify-between"
               >
                 {/* Header Feature Box */}
                 <div
                   onClick={() => setSelectedItem(item)}
-                  className="p-6 bg-gradient-to-br from-[#381625] via-[#28101A] to-[#1F0715] border-b border-[#FF8559]/20 cursor-pointer relative"
+                  className="p-6 bg-gradient-to-br from-pink-50 via-white to-pink-50/50 border-b border-pink-100 cursor-pointer relative"
                 >
                   <div className="flex items-center justify-between mb-3">
-                    <span className="bg-[#CF5376]/90 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1 rounded-full border border-[#FFB578]/50 flex items-center gap-1 shadow-md">
-                      <Heart className="w-3 h-3 text-[#FFB578] fill-[#FFB578]" />
+                    <span className="bg-pink-100 text-[#DB2777] text-[11px] font-bold px-3 py-1 rounded-full border border-pink-200 flex items-center gap-1 shadow-xs">
+                      <Heart className="w-3 h-3 text-[#EC4899] fill-[#EC4899]" />
                       <span>{item.category}</span>
                     </span>
-                    <span className="text-[10px] text-[#FFB578] font-bold uppercase tracking-wider flex items-center gap-1">
-                      <Award className="w-3.5 h-3.5" /> Signature Look
+                    <span className="text-[10px] text-[#DB2777] font-bold uppercase tracking-wider flex items-center gap-1">
+                      <Award className="w-3.5 h-3.5 text-[#EC4899]" /> Signature Look
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-serif font-bold text-white group-hover:text-[#FFB578] transition-colors">
+                  <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-[#EC4899] transition-colors">
                     {item.title}
                   </h3>
                 </div>
@@ -158,17 +158,17 @@ export const BridalGallerySection: React.FC = () => {
                 {/* Content Details */}
                 <div className="p-5 space-y-3 flex-1 flex flex-col justify-between">
                   <div>
-                    <p className="text-xs text-rose-100/80 leading-relaxed">
+                    <p className="text-xs text-gray-600 leading-relaxed">
                       {item.description}
                     </p>
                   </div>
 
                   {/* Highlight Bullets */}
-                  <div className="pt-2 border-t border-white/10 flex flex-wrap gap-1.5">
+                  <div className="pt-2 border-t border-pink-100 flex flex-wrap gap-1.5">
                     {item.highlights.map((hl, idx) => (
                       <span
                         key={idx}
-                        className="text-[10px] font-medium bg-[#CF5376]/20 text-[#FFB578] px-2 py-0.5 rounded border border-[#FF8559]/20"
+                        className="text-[10px] font-semibold bg-pink-50 text-[#DB2777] px-2.5 py-1 rounded-full border border-pink-200"
                       >
                         ✓ {hl}
                       </span>
@@ -176,10 +176,10 @@ export const BridalGallerySection: React.FC = () => {
                   </div>
 
                   {/* WhatsApp Inquiry Button */}
-                  <div className="pt-3 border-t border-white/10 flex items-center justify-between">
+                  <div className="pt-3 border-t border-pink-100 flex items-center justify-between">
                     <button
                       onClick={() => setSelectedItem(item)}
-                      className="text-xs text-[#FFB578]/90 hover:text-[#FFB578] font-semibold underline flex items-center gap-1 cursor-pointer"
+                      className="text-xs text-[#DB2777] hover:text-[#EC4899] font-bold underline flex items-center gap-1 cursor-pointer"
                     >
                       <Eye className="w-3.5 h-3.5" />
                       <span>Details View</span>
@@ -189,7 +189,7 @@ export const BridalGallerySection: React.FC = () => {
                       href={waUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 rounded-full bg-gradient-to-r from-[#E65447] via-[#FF8559] to-[#FFB578] text-white text-xs font-bold shadow-md flex items-center gap-1.5 transition cursor-pointer border border-[#FFB578]/40"
+                      className="px-4 py-2 rounded-full bg-gradient-to-r from-[#EC4899] via-[#F472B6] to-[#FB7185] text-white text-xs font-bold shadow-xs flex items-center gap-1.5 transition cursor-pointer border border-pink-300"
                     >
                       <MessageSquare className="w-3.5 h-3.5 text-white" />
                       <span>Inquire Look</span>
@@ -204,53 +204,53 @@ export const BridalGallerySection: React.FC = () => {
 
       {/* Lightbox / Details Modal */}
       {selectedItem && (
-        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-          <div className="bg-[#28101A] rounded-2xl border border-[#FF8559] max-w-2xl w-full p-6 sm:p-8 overflow-hidden shadow-2xl relative my-auto space-y-5">
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+          <div className="bg-white rounded-3xl border border-pink-200 max-w-2xl w-full p-6 sm:p-8 overflow-hidden shadow-2xl relative my-auto space-y-5">
             {/* Close Button */}
             <button
               onClick={() => setSelectedItem(null)}
-              className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center border border-white/20 transition cursor-pointer"
+              className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-pink-50 hover:bg-pink-100 text-gray-700 flex items-center justify-center border border-pink-200 transition cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
 
             <div className="space-y-4">
-              <span className="inline-block bg-[#CF5376] text-white text-xs font-bold px-3 py-1 rounded-full border border-[#FFB578]/40">
+              <span className="inline-block bg-pink-100 text-[#DB2777] text-xs font-bold px-3 py-1 rounded-full border border-pink-200">
                 {selectedItem.category}
               </span>
 
-              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900">
                 {selectedItem.title}
               </h3>
 
-              <p className="text-xs sm:text-sm text-rose-100/90 leading-relaxed">
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                 {selectedItem.description}
               </p>
 
               <div className="space-y-2 pt-2">
-                <span className="text-xs font-semibold text-[#FFB578] block uppercase tracking-wider">
+                <span className="text-xs font-bold text-[#DB2777] block uppercase tracking-wider">
                   Transformation Highlights
                 </span>
-                <ul className="space-y-1.5 text-xs text-rose-100">
+                <ul className="space-y-1.5 text-xs text-gray-700">
                   {selectedItem.highlights.map((hl, idx) => (
                     <li key={idx} className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0" />
                       <span>{hl}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="bg-[#1A0912] p-4 rounded-xl border border-[#FF8559]/30 text-xs text-rose-200/90 flex items-center gap-3">
-                <ShieldCheck className="w-5 h-5 text-[#FFB578] shrink-0" />
+              <div className="bg-pink-50 p-4 rounded-2xl border border-pink-200 text-xs text-pink-950 flex items-center gap-3">
+                <ShieldCheck className="w-5 h-5 text-[#EC4899] shrink-0" />
                 <span>Styling by Master Stylist Hira Shah & Senior Technicians at Deluxe HS Faisalabad.</span>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="pt-4 border-t border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-3">
               <button
                 onClick={() => setSelectedItem(null)}
-                className="w-full sm:w-auto px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold transition"
               >
                 Close Details
               </button>
@@ -259,7 +259,7 @@ export const BridalGallerySection: React.FC = () => {
                 href={`https://wa.me/923013928585?text=${encodeURIComponent(`Hello Deluxe HS Salon! I want to inquire about availability for the "${selectedItem.title}" bridal look.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-gradient-to-r from-[#E65447] via-[#FF8559] to-[#FFB578] text-white text-xs font-bold shadow-lg border border-[#FFB578]/40 flex items-center justify-center gap-2 cursor-pointer transition"
+                className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-gradient-to-r from-[#EC4899] via-[#F472B6] to-[#FB7185] text-white text-xs font-bold shadow-md border border-pink-300 flex items-center justify-center gap-2 cursor-pointer transition"
               >
                 <MessageSquare className="w-4 h-4 text-white" />
                 <span>Inquire this Look on WhatsApp</span>
@@ -271,3 +271,4 @@ export const BridalGallerySection: React.FC = () => {
     </section>
   );
 };
+
