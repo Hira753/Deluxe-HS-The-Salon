@@ -28,7 +28,8 @@ function initMobileMenu() {
   if (hamburgerBtn && mobileDrawer) {
     function toggleDrawer(e) {
       if (e) {
-        e.stopPropagation();
+        if (typeof e.preventDefault === 'function') e.preventDefault();
+        if (typeof e.stopPropagation === 'function') e.stopPropagation();
       }
       const isOpen = mobileDrawer.classList.contains('open');
       if (isOpen) {
@@ -42,10 +43,20 @@ function initMobileMenu() {
       }
     }
 
-    hamburgerBtn.addEventListener('click', toggleDrawer);
+    let touchHandled = false;
+    hamburgerBtn.addEventListener('touchend', (e) => {
+      touchHandled = true;
+      toggleDrawer(e);
+      setTimeout(() => { touchHandled = false; }, 400);
+    }, { passive: false });
 
-    // Auto-close menu drawer when clicking a link inside it
-    const drawerLinks = mobileDrawer.querySelectorAll('a, button');
+    hamburgerBtn.addEventListener('click', (e) => {
+      if (touchHandled) return;
+      toggleDrawer(e);
+    });
+
+    // Auto-close menu drawer when clicking a link or button inside it
+    const drawerLinks = mobileDrawer.querySelectorAll('a, button, .mobile-nav-link');
     drawerLinks.forEach(link => {
       link.addEventListener('click', () => {
         mobileDrawer.classList.remove('open');
@@ -67,13 +78,22 @@ function initMobileMenu() {
 
 /* --- 2. Active Navigation Link Highlight --- */
 function initActiveNav() {
-  const currentPath = window.location.pathname;
-  const pageName = currentPath.split('/').pop() || 'index.html';
+  let currentPath = window.location.pathname;
+  if (currentPath.length > 1 && currentPath.endsWith('/')) {
+    currentPath = currentPath.slice(0, -1);
+  }
+  let pageName = currentPath.split('/').pop() || 'index.html';
+  if (!pageName || pageName === '/') pageName = 'index.html';
+  if (!pageName.includes('.')) pageName = pageName + '.html';
 
   const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (href === pageName || (pageName === '' && href === 'index.html')) {
+    if (!href) return;
+    let linkPage = href.split('/').pop();
+    if (!linkPage.includes('.')) linkPage = linkPage + '.html';
+
+    if (linkPage === pageName || (pageName === 'index.html' && (linkPage === 'index.html' || linkPage === ''))) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
@@ -88,12 +108,11 @@ let currentImageIndex = 0;
 function initGalleryLightbox() {
   const galleryItems = document.querySelectorAll('.gallery-item');
   const lightboxModal = document.getElementById('lightbox-modal');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxTitle = document.getElementById('lightbox-title');
-  const lightboxDesc = document.getElementById('lightbox-desc');
   const lightboxClose = document.getElementById('lightbox-close');
 
   if (!galleryItems.length || !lightboxModal) return;
+
+  galleryItemsData = [];
 
   // Build array of image data
   galleryItems.forEach((item, index) => {
@@ -158,11 +177,13 @@ function closeLightbox() {
 }
 
 function showNextImage() {
+  if (!galleryItemsData.length) return;
   currentImageIndex = (currentImageIndex + 1) % galleryItemsData.length;
   openLightbox(currentImageIndex);
 }
 
 function showPrevImage() {
+  if (!galleryItemsData.length) return;
   currentImageIndex = (currentImageIndex - 1 + galleryItemsData.length) % galleryItemsData.length;
   openLightbox(currentImageIndex);
 }
@@ -175,7 +196,11 @@ function initFilters() {
   if (!filterBtns.length) return;
 
   filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+    function handleFilter(e) {
+      if (e) {
+        if (typeof e.preventDefault === 'function') e.preventDefault();
+      }
+
       // Toggle active button
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
@@ -191,6 +216,18 @@ function initFilters() {
           card.style.display = 'none';
         }
       });
+    }
+
+    let touchHandled = false;
+    btn.addEventListener('touchend', (e) => {
+      touchHandled = true;
+      handleFilter(e);
+      setTimeout(() => { touchHandled = false; }, 400);
+    }, { passive: false });
+
+    btn.addEventListener('click', (e) => {
+      if (touchHandled) return;
+      handleFilter(e);
     });
   });
 }
@@ -230,7 +267,6 @@ function initFormValidations() {
       e.preventDefault();
       
       const name = document.getElementById('contact-name')?.value.trim();
-      const email = document.getElementById('contact-email')?.value.trim();
       const phone = document.getElementById('contact-phone')?.value.trim();
       const message = document.getElementById('contact-message')?.value.trim();
 
@@ -252,7 +288,6 @@ function initFormValidations() {
 
       const name = document.getElementById('booking-name')?.value.trim();
       const phone = document.getElementById('booking-phone')?.value.trim();
-      const email = document.getElementById('booking-email')?.value.trim();
       const service = document.getElementById('booking-service')?.value;
       const date = document.getElementById('booking-date')?.value;
       const time = document.getElementById('booking-time')?.value;
@@ -263,7 +298,6 @@ function initFormValidations() {
         return;
       }
 
-      // Show Confirmation Modal or Toast with WhatsApp option
       const bookingSummaryText = `New Appointment Booking:\n- Name: ${name}\n- Phone: ${phone}\n- Service: ${service}\n- Date: ${date}\n- Time: ${time}${notes ? '\n- Notes: ' + notes : ''}`;
       
       showBookingSuccessModal(name, service, date, time, bookingSummaryText);
@@ -283,7 +317,7 @@ function showToast(message, type = 'success') {
     document.body.appendChild(toast);
   }
 
-  const iconClass = type === 'success' ? 'fa-solid fa-circle-check text-emerald-500' : 'fa-solid fa-triangle-exclamation text-amber-500';
+  const iconClass = type === 'success' ? 'fa-solid fa-circle-check' : 'fa-solid fa-triangle-exclamation';
 
   toast.innerHTML = `
     <i class="${iconClass}" style="font-size: 1.5rem; color: ${type === 'success' ? '#10B981' : '#F59E0B'}"></i>
@@ -361,7 +395,7 @@ function initSeeMoreReviews() {
   const seeMoreBtn = document.getElementById('see-more-reviews-btn');
   if (!seeMoreBtn) return;
 
-  const BATCH_SIZE = 6; // Reveal 6 reviews at a time for optimal mobile performance
+  const BATCH_SIZE = 6;
 
   function updateButtonState() {
     const hiddenCount = document.querySelectorAll('.review-card.review-hidden').length;
@@ -372,19 +406,17 @@ function initSeeMoreReviews() {
     }
   }
 
-  // Set initial button text based on DOM state
   updateButtonState();
 
   function toggleReviews(e) {
     if (e) {
-      e.preventDefault();
-      e.stopPropagation();
+      if (typeof e.preventDefault === 'function') e.preventDefault();
+      if (typeof e.stopPropagation === 'function') e.stopPropagation();
     }
 
     const hiddenCards = Array.from(document.querySelectorAll('.review-card.review-hidden'));
 
     if (hiddenCards.length > 0) {
-      // Reveal next batch of cards (6 at a time)
       const toShow = hiddenCards.slice(0, BATCH_SIZE);
       toShow.forEach((card, index) => {
         card.classList.remove('review-hidden');
@@ -393,14 +425,12 @@ function initSeeMoreReviews() {
 
       updateButtonState();
 
-      // Smoothly scroll down to the first newly shown review on mobile screens
       if (toShow[0]) {
         setTimeout(() => {
           toShow[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }, 100);
       }
     } else {
-      // Collapse back to top 4 cards
       const allCards = document.querySelectorAll('.review-card');
       allCards.forEach((card, index) => {
         if (index >= 4) {
@@ -418,7 +448,6 @@ function initSeeMoreReviews() {
     }
   }
 
-  // Handle both touch and click for mobile device compatibility
   let touchHandled = false;
 
   seeMoreBtn.addEventListener('touchend', (e) => {
