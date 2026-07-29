@@ -2,7 +2,15 @@
    DELUXE HS THE SALON - INTERACTIVE JAVASCRIPT (script.js)
    ========================================================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', initAll);
+if (document.readyState === 'interactive' || document.readyState === 'complete') {
+  initAll();
+}
+
+let isInitialized = false;
+function initAll() {
+  if (isInitialized) return;
+  isInitialized = true;
   initMobileMenu();
   initActiveNav();
   initGalleryLightbox();
@@ -10,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBookingServiceParam();
   initFormValidations();
   initSeeMoreReviews();
-});
+}
 
 /* --- 1. Mobile Menu Toggle --- */
 function initMobileMenu() {
@@ -353,32 +361,74 @@ function initSeeMoreReviews() {
   const seeMoreBtn = document.getElementById('see-more-reviews-btn');
   if (!seeMoreBtn) return;
 
-  const initialHiddenCount = document.querySelectorAll('.review-card.review-hidden').length;
-  if (initialHiddenCount > 0) {
-    seeMoreBtn.innerHTML = `<i class="fa-solid fa-angles-down"></i> See More Client Reviews (${initialHiddenCount} More)`;
+  const BATCH_SIZE = 6; // Reveal 6 reviews at a time for optimal mobile performance
+
+  function updateButtonState() {
+    const hiddenCount = document.querySelectorAll('.review-card.review-hidden').length;
+    if (hiddenCount > 0) {
+      seeMoreBtn.innerHTML = `<i class="fa-solid fa-angles-down"></i> See More Client Reviews (${hiddenCount} More)`;
+    } else {
+      seeMoreBtn.innerHTML = `<i class="fa-solid fa-angles-up"></i> Show Less Reviews`;
+    }
   }
 
-  seeMoreBtn.addEventListener('click', () => {
-    const hiddenCards = document.querySelectorAll('.review-card.review-hidden');
+  // Set initial button text based on DOM state
+  updateButtonState();
+
+  function toggleReviews(e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    const hiddenCards = Array.from(document.querySelectorAll('.review-card.review-hidden'));
+
     if (hiddenCards.length > 0) {
-      hiddenCards.forEach((card, index) => {
+      // Reveal next batch of cards (6 at a time)
+      const toShow = hiddenCards.slice(0, BATCH_SIZE);
+      toShow.forEach((card, index) => {
         card.classList.remove('review-hidden');
-        card.style.animation = `fadeIn 0.4s ease ${index * 0.05}s both`;
+        card.style.animation = `fadeIn 0.35s ease ${index * 0.05}s both`;
       });
-      seeMoreBtn.innerHTML = '<i class="fa-solid fa-angles-up"></i> Show Less Reviews';
+
+      updateButtonState();
+
+      // Smoothly scroll down to the first newly shown review on mobile screens
+      if (toShow[0]) {
+        setTimeout(() => {
+          toShow[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
     } else {
+      // Collapse back to top 4 cards
       const allCards = document.querySelectorAll('.review-card');
       allCards.forEach((card, index) => {
         if (index >= 4) {
           card.classList.add('review-hidden');
+          card.style.animation = '';
         }
       });
-      seeMoreBtn.innerHTML = '<i class="fa-solid fa-angles-down"></i> See More Client Reviews (' + (allCards.length - 4) + ' More)';
-      
+
+      updateButtonState();
+
       const reviewsSection = document.getElementById('client-reviews-section');
       if (reviewsSection) {
-        reviewsSection.scrollIntoView({ behavior: 'smooth' });
+        reviewsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
+  }
+
+  // Handle both touch and click for mobile device compatibility
+  let touchHandled = false;
+
+  seeMoreBtn.addEventListener('touchend', (e) => {
+    touchHandled = true;
+    toggleReviews(e);
+    setTimeout(() => { touchHandled = false; }, 400);
+  }, { passive: false });
+
+  seeMoreBtn.addEventListener('click', (e) => {
+    if (touchHandled) return;
+    toggleReviews(e);
   });
 }
