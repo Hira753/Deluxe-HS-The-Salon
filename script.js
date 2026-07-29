@@ -18,7 +18,10 @@ function initMobileMenu() {
   const mobileDrawer = document.getElementById('mobile-drawer');
 
   if (hamburgerBtn && mobileDrawer) {
-    hamburgerBtn.addEventListener('click', () => {
+    function toggleDrawer(e) {
+      if (e) {
+        e.stopPropagation();
+      }
       const isOpen = mobileDrawer.classList.contains('open');
       if (isOpen) {
         mobileDrawer.classList.remove('open');
@@ -28,6 +31,27 @@ function initMobileMenu() {
         mobileDrawer.classList.add('open');
         hamburgerBtn.setAttribute('aria-expanded', 'true');
         hamburgerBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      }
+    }
+
+    hamburgerBtn.addEventListener('click', toggleDrawer);
+
+    // Auto-close menu drawer when clicking a link inside it
+    const drawerLinks = mobileDrawer.querySelectorAll('a, button');
+    drawerLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.remove('open');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        hamburgerBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      });
+    });
+
+    // Close drawer when clicking outside
+    document.addEventListener('click', (e) => {
+      if (mobileDrawer.classList.contains('open') && !mobileDrawer.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+        mobileDrawer.classList.remove('open');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        hamburgerBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
       }
     });
   }
