@@ -25,55 +25,65 @@ function initMobileMenu() {
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const mobileDrawer = document.getElementById('mobile-drawer');
 
-  if (hamburgerBtn && mobileDrawer) {
-    function toggleDrawer(e) {
-      if (e) {
-        if (typeof e.preventDefault === 'function') e.preventDefault();
-        if (typeof e.stopPropagation === 'function') e.stopPropagation();
-      }
-      const isOpen = mobileDrawer.classList.contains('open');
-      if (isOpen) {
-        mobileDrawer.classList.remove('open');
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-        hamburgerBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-      } else {
-        mobileDrawer.classList.add('open');
-        hamburgerBtn.setAttribute('aria-expanded', 'true');
-        hamburgerBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+  if (!hamburgerBtn || !mobileDrawer) return;
+
+  function openDrawer() {
+    mobileDrawer.classList.add('open');
+    hamburgerBtn.setAttribute('aria-expanded', 'true');
+    const icon = hamburgerBtn.querySelector('i');
+    if (icon) {
+      icon.className = 'fa-solid fa-xmark';
+    }
+  }
+
+  function closeDrawer() {
+    mobileDrawer.classList.remove('open');
+    hamburgerBtn.setAttribute('aria-expanded', 'false');
+    const icon = hamburgerBtn.querySelector('i');
+    if (icon) {
+      icon.className = 'fa-solid fa-bars';
+    }
+  }
+
+  function toggleDrawer(e) {
+    if (e) {
+      if (typeof e.preventDefault === 'function') e.preventDefault();
+      if (typeof e.stopPropagation === 'function') e.stopPropagation();
+    }
+    const isOpen = mobileDrawer.classList.contains('open');
+    if (isOpen) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  }
+
+  // Handle Hamburger Button click (works on touch and mouse)
+  hamburgerBtn.addEventListener('click', toggleDrawer);
+
+  // Auto-close menu drawer when clicking any link or button inside it
+  const drawerLinks = mobileDrawer.querySelectorAll('a, button, .mobile-nav-link');
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeDrawer();
+    });
+  });
+
+  // Close drawer when clicking outside
+  document.addEventListener('click', (e) => {
+    if (mobileDrawer.classList.contains('open')) {
+      if (!mobileDrawer.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+        closeDrawer();
       }
     }
+  });
 
-    let touchHandled = false;
-    hamburgerBtn.addEventListener('touchend', (e) => {
-      touchHandled = true;
-      toggleDrawer(e);
-      setTimeout(() => { touchHandled = false; }, 400);
-    }, { passive: false });
-
-    hamburgerBtn.addEventListener('click', (e) => {
-      if (touchHandled) return;
-      toggleDrawer(e);
-    });
-
-    // Auto-close menu drawer when clicking a link or button inside it
-    const drawerLinks = mobileDrawer.querySelectorAll('a, button, .mobile-nav-link');
-    drawerLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileDrawer.classList.remove('open');
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-        hamburgerBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-      });
-    });
-
-    // Close drawer when clicking outside
-    document.addEventListener('click', (e) => {
-      if (mobileDrawer.classList.contains('open') && !mobileDrawer.contains(e.target) && !hamburgerBtn.contains(e.target)) {
-        mobileDrawer.classList.remove('open');
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-        hamburgerBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-      }
-    });
-  }
+  // Close drawer on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) {
+      closeDrawer();
+    }
+  });
 }
 
 /* --- 2. Active Navigation Link Highlight --- */
